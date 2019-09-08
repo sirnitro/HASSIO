@@ -1,0 +1,28 @@
+title: M. Bath
+icon: mdi:shower
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/master-bath.png
+  - type: vertical-stack
+    cards:
+      
+      - type: horizontal-stack
+        cards:
+        - type: light
+          entity: light.bath1
+          name: Master Bath 1
+        - type: light
+          entity: light.bath2 
+          name: Master Bath 2
+          
+      - type: horizontal-stack
+        cards:  
+        - type: light
+          entity: light.bath3
+          name: Master Bath 3
+        - type: light
+          entity: light.bath4  
+          name: Master Bath 4

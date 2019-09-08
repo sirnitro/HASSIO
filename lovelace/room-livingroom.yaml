@@ -1,0 +1,17 @@
+title: Living Room
+icon: mdi:sofa
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/living-room.png
+  - type: horizontal-stack
+    cards:
+      - type: light
+        entity: light.lrc1
+        name: LR Ceiling 1
+      - type: light
+        entity: light.lrc2
+        name: LR Ceiling 2
+

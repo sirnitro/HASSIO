@@ -1,0 +1,82 @@
+######BATHROOM
+bathroom:
+    name: Master Bath
+    entities:
+      - light.bath1
+      - light.bath2
+      - light.bath3
+      - light.bath4
+
+bathroomall:
+    name: Master Bath all
+    entities:
+      - light.bath1
+      - light.bath2
+      - light.bath3
+      - light.bath4
+      
+family:
+    name: Family
+    icon: mdi:home-heart
+    entities:
+      - device_tracker.beth
+      - device_tracker.clint
+
+#####LIVING ROOM
+livingroomceiling:
+    name: Living Room Ceiling
+    icon: mdi:ceiling-light
+    entities:
+        - light.lrc1
+        - light.lrc2
+   
+livingroomall:
+    name: Living Room All
+    icon: mdi:arrow-expand-all
+    entities:
+         - light.lrc1
+         - light.lrc2    
+
+####MASTER BEDROOM
+masterfan:
+    name: Master Fan
+    icon: mdi:fan
+    entities:
+        - light.mf1
+        - light.mf2
+        - light.mf3
+        - light.mf4
+
+masterbedall:
+    name: Master Bedroom All
+    icon: mdi:arrow-expand-all
+    entities:
+        - light.mf1
+        - light.mf2
+        - light.mf3
+        - light.mf4
+        
+#####OFFICE
+officeceiling:
+    name: Office Ceiling
+    icon: mdi:ceiling-light
+    entities: 
+        - light.oc1
+        - light.oc2
+    
+officeall:
+    name: Office All
+    icon: mdi:arrow-expand-all
+    entities: 
+        - switch.printer
+        - light.oc1
+        - light.oc2
+    
+spares:
+    name: spares
+    entities:
+        - light.spare1
+        - light.spare2
+        - light.spare5
+        
+ 

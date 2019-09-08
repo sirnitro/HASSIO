@@ -1,0 +1,30 @@
+title: Lightening Strikes
+geo_location:
+  - platform: nsw_rural_fire_service_feed
+    categories:
+      - 'Emergency Warning'
+      - 'Watch and Act'
+      - 'Advice'
+
+zone:
+  - name: Bush Fire Alert Zone
+    latitude: -36.666667
+    longitude: 149.833333
+    radius: 15000
+    passive: true
+
+automation:
+  - alias: 'Bush Fire Alert'
+    trigger:
+      platform: geo_location
+      source: nsw_rural_fire_service_feed
+      zone: zone.bush_fire_alert_zone
+      event: enter
+    condition:
+      condition: template
+      value_template: "{{ trigger.to_state.attributes.type == 'Bush Fire' }}"
+    action:
+      - service: persistent_notification.create
+        data_template:
+          message: "{{ trigger.to_state.name }} - {{ trigger.to_state.attributes.status }}"
+          title: "Bush Fire Alert"

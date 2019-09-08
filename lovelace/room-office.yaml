@@ -1,0 +1,38 @@
+title: Man Cave
+icon: mdi:baseball-bat
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/man-cave.png
+        
+  - type: vertical-stack
+    cards:
+      
+      - type: horizontal-stack
+        cards:
+        - type: light
+          entity: light.oc1
+          name: Office Ceiling 1
+        - type: light
+          entity: light.oc2
+          name: Office Ceiling 2
+
+      - type: horizontal-stack
+        cards:   
+          - type: picture-entity
+            entity: switch.printer
+            tap_action:
+                action: toggle
+            state_image:
+              "on": /local/on.png 
+              "off": /local/off.png
+
+          - type: picture-entity
+            entity: switch.wireless
+            tap_action:
+                action: toggle
+            state_image:
+              "on": /local/on.png 
+              "off": /local/off.png

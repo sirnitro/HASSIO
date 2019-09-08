@@ -1,0 +1,37 @@
+title: Network
+icon: mdi:lan
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/network-stats.png
+  - type: vertical-stack
+    cards:
+      
+      - type: horizontal-stack
+        cards:
+        - type: sensor
+          entity: sensor.orbi_packets_second_received
+          name: Router Packets/sec In
+        - type: sensor
+          entity: sensor.rbr40_gateway_packets_sec_sent
+          name: Router Packets/sec Out
+          
+      - type: horizontal-stack
+        cards:
+        - type: sensor
+          entity: sensor.orbi_packets_received
+          name: Router Total Packets In
+        - type: sensor
+          entity: sensor.rbr40_gateway_packets_sent
+          name: Router Total Packets Out
+          
+      - type: horizontal-stack
+        cards:  
+        - type: sensor
+          entity: sensor.bytes_received
+          name: Router bytes/sec In
+        - type: sensor
+          entity: sensor.orbi_bytes_sent
+          name: Router bytes/sec Out

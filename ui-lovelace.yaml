@@ -1,0 +1,22 @@
+title: Wilson's Corner (Wabash, Indiana)
+views:   
+  - !include /config/lovelace/home.yaml      
+  - !include /config/lovelace/floorplan.yaml
+  - !include /config/lovelace/room-livingroom.yaml
+  - !include /config/lovelace/room-masterbed.yaml
+  - !include /config/lovelace/room-masterbath.yaml
+  - !include /config/lovelace/room-office.yaml
+#  - !include /config/lovelace/room-secondbath.yaml
+#  - !include /config/lovelace/room-secondbed.yaml
+#  - !include /config/lovelace/room-thirdbed.yaml
+#  - !include /config/lovelace/room-pantry.yaml
+#  - !include /config/lovelace/room-kitchenhall.yaml
+#  - !include /config/lovelace/lights.yaml
+#  - !include /config/lovelace/roku.yaml
+  - !include /config/lovelace/network.yaml
+#  - !include /config/lovelace/spares.yaml
+  - !include /config/lovelace/fitbit.yaml
+
+
+resources:
+  - !include /config/resources.yaml

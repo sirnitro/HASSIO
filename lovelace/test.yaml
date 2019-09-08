@@ -1,0 +1,63 @@
+title: TEST
+panel: yes
+cards:
+  - entity: weather.wilsonscorner
+    type: weather-forecast
+  - cards:
+      - entities:
+          - entity: sensor.beth_battery_level
+          - entity: sensor.clint_battery_level
+            full_row: true
+            type: 'custom:slider-entity-row'
+        type: entities
+      - entities:
+          - entity:
+          - entity:
+            full_row: true
+            name: 
+            type: 'custom:slider-entity-row'
+        type: entities
+    type: horizontal-stack
+  - cards:
+      - entity: light.mf1
+        icon: 'mdi:ceiling-light'
+        type: light
+      - entity: light.mf2
+        icon: 'mdi:lamp'
+        type: entity-button
+      - entity: light.mf3
+        icon: 'mdi:home-floor-a'
+        type: entity-button
+      - entity: light
+        icon: 'mdi:desk-lamp'
+        type: entity-button
+    type: horizontal-stack
+  - color_thresholds:
+      - color: '#00bcd4'
+        value: 0
+      - color: '#00bcd4'
+        value: 25
+      - color: '#d35400'
+        value: 28
+      - color: '#c0392b'
+        value: 30
+    entities:
+      - entity: 
+        name: 
+      - entity: 
+        name: 
+      - entity: 
+        name: 
+      - entity: 
+        height: 100
+        hours_to_show: 12
+        name: Lennart
+        points_per_hour: 1
+        show:
+          icon: false
+          labels: false
+          name: false
+          points: false
+          state: false
+    type: 'custom:mini-graph-card'
+type: vertical-stack

@@ -1,0 +1,28 @@
+title: M. Bed
+icon: mdi:hotel
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/master-bedroom.png
+  - type: vertical-stack
+    cards:
+      
+      - type: horizontal-stack
+        cards:
+        - type: light
+          entity: light.mf1
+          name: Master Fan 1
+        - type: light
+          entity: light.mf2 
+          name: Master Fan 2
+          
+      - type: horizontal-stack
+        cards:  
+        - type: light
+          entity: light.mf3
+          name: Master Fan 3
+        - type: light
+          entity: light.mf4  
+          name: Master Fan 4

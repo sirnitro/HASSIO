@@ -1,0 +1,6 @@
+- title: Floor plan
+  panel: true
+    cards:
+      - type: picture-elements
+        image: /local/floorplan.png
+        elements:

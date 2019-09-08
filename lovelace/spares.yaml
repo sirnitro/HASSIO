@@ -1,0 +1,28 @@
+title: Spares
+icon: mdi:close-circle
+type: horizontal-stack
+cards:
+          
+  - type: vertical-stack
+    cards:
+      
+      - type: horizontal-stack
+        cards:
+        - type: light
+          entity: light.spare1
+          name: Spara Tuya 1
+        - type: light
+          entity: light.spare2
+          name: Spara Tuya 2
+          
+  - type: vertical-stack
+    cards:
+      
+      - type: horizontal-stack
+        cards:
+        - type: light
+          entity: light.fp
+          name: Front Porch
+        - type: light
+          entity: light.colored1
+          name: Spare Colored Bulb

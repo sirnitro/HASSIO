@@ -1,0 +1,86 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+http:
+  ssl_certificate: /config/ssl/certificate.pem
+  ssl_key: /config/ssl/privkey.pem
+
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+sensor: !include sensors.yaml
+hassio:
+discovery:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+remote:
+  - platform: harmony
+    name: Living Room
+    host: !secret harmony_hub_ip
+    
+#sensor:
+#  - platform: glances
+#    host: 127.0.0.1
+#    username: !secret glance_user
+#    password: !secret glance_pass
+#    version: 3
+#    resources:
+#      - 'processor_load'
+#      - 'memory_use_percent'
+#      - 'disk_use_percent'
+
+ 
+wunderlist:
+  client_id: !secret wunder_id
+  access_token: !secret wunder_token
+ 
+#octoprint:
+#   host: !secret octo_host
+#   api_key: !secret octo_key
+   
+#binary_sensor:
+#    - platform: octoprint
+#      monitored_conditions:
+#        - 'Printing'
+#        - 'Printing Error'
+
+tplink:
+  switch:
+   - host: !secret tpswitch1_ip
+#   - host: !secret tpswitch2_ip
+    
+tuya:
+  username: !secret tuya_user
+  password: !secret tuya_pass
+  country_code: 1
+  
+media_player:
+  - platform: plex
+  
+lovelace:
+  mode: yaml
+  
+zwave:
+  usb_path: /dev/ttyUSB0
+  device_config: !include zwave_device_config.yaml
+  
+zha:
+  #usb_path: /dev/ttyAMA0
+  usb_path: /dev/ttyUSB1
+  database_path: /config/zigbee.db
+  
+hacs:
+  token: !secret github_token
+  
+frontend:
+  themes: !include_dir_merge_named themes
+  

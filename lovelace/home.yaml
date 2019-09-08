@@ -1,0 +1,67 @@
+title: Home
+icon: mdi:home-variant
+type: horizontal-stack
+cards:
+  - type: weather-forecast
+    entity: weather.wilsonscorner
+  - type: vertical-stack
+    cards:
+      - type: shopping-list
+        title: Shopping List
+  - type: horizontal-stack
+    cards:
+      - type: sensor
+        entity: sensor.beth_battery_level
+        name: Beth
+      - type: sensor
+        entity: sensor.beth_battery_state
+        name: Beth
+ 
+        
+  - type: horizontal-stack
+    cards:
+      - type: sensor
+        name: Clint
+        entity: sensor.clint_battery_level
+      - type: sensor
+        name: Clint
+        entity: sensor.clint_battery_state
+   
+ 
+ 
+        
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.processor_use
+        name: CPU Usage
+        severity:
+          green: 0
+          yellow: 45
+          red: 85
+          
+      - type: gauge
+        entity: sensor.disk_use_percent_home
+        name: Disk Usage
+        severity:
+          green: 0
+          yellow: 50
+          red: 85
+  
+  - type: horizontal-stack
+    cards:  
+      - type: light
+        entity: light.bath3
+        name: Master Bath 3
+      - type: light
+        entity: light.bath4  
+        name: Master Bath 4
+      
+
+
+           
+#- type: custom:group-card
+#  card:
+#    type: entities
+#    title: bathroom
+#  group: group.bathroom

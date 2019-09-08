@@ -1,0 +1,23 @@
+title: Roku
+type: 'custom:roku-card'
+entity: media_player.lr_roku
+tv: true
+apps:
+#  - id: Netflix
+#    icon: /local/Netflix.jpg
+#  - id: Hulu
+#    icon: /local/Hulu.jpg
+volume_up:
+  tap_action:
+    action: call-service
+    service: remote.send_command
+    service_data:
+      entity_id: remote.lr_roku
+      command: play
+volume_down:
+  dbltap_action:
+    action: call-service
+    service: remote.send_command
+    service_data:
+      entity_id: remote.lr_roku
+      command: play
