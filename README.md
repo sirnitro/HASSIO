@@ -8,7 +8,10 @@ Welcome Home Assistant.
 
 I am running HASS.IO on a Raspberry Pi 3+. I will be adding to this as I am able to.
 
-Primary Console Screen
+## Primary Console Screen
 
 
 <img src="https://github.com/sirnitro/HASSIO/blob/master/site-images/home-screen.PNG">
+
+## The Man Cave
+<img src="https://github.com/sirnitro/HASSIO/blob/master/site-images/Man-Cave.PNG">
