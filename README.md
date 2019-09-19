@@ -2,5 +2,5 @@
 
 Primary Console Screen
 
-![GitHub Logo](/site-images/home-screen.jpg)
-Format: ![Alt Text](url)
+
+<img src="https://github.com/sirnitro/HASSIO/blob/master/site-images/home-screen.PNG">
