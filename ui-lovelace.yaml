@@ -13,10 +13,41 @@ views:
 #  - !include /config/lovelace/room-kitchenhall.yaml
 #  - !include /config/lovelace/lights.yaml
 #  - !include /config/lovelace/roku.yaml
-  - !include /config/lovelace/network.yaml
+#  - !include /config/lovelace/network.yaml
 #  - !include /config/lovelace/spares.yaml
   - !include /config/lovelace/fitbit.yaml
+#  - !include /config/lovelace/fitbit2.yaml
+#  - !include /config/lovelace/testtv.yaml
+#  - !include /config/lovelace/test.yaml
+#  - !include /config/lovelace/lighting.yaml
+#  - !include /config/lovelace/plugin.yaml
 
+#resources: !include /config/resources.yaml
 
 resources:
-  - !include /config/resources.yaml
+  - url: /community_plugin/compact-custom-header/compact-custom-header.js?v=5
+    type: module    
+  - url: /community_plugin/fitbit-card/fitbit-card.js?v=5
+    type: js
+  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js?v=0.6.0
+    type: js
+  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js?v=5
+    type: module
+  - url: /community_plugin/radial-menu/radial-menu.js?v=5
+    type: module
+  - url: /community_plugin/roku-card/roku-card.js?v=5     #BROKEN
+    type: module
+  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js?v=5
+    type: js
+  - url: /community_plugin/circle-sensor-card/circle-sensor-card.js?v=5
+    type: module
+  - url: /community_plugin/monster-card/monster-card.js?v=5
+    type: module
+  - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js?v=5
+    type: module
+    
+# Type Unknown
+  - url: /community_plugin/group-card/group-card.js?v=5
+    type: js
+
+ 

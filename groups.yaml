@@ -78,5 +78,13 @@ spares:
         - light.spare1
         - light.spare2
         - light.spare5
+
+diningroom:
+    name: Dining Room
+    icon: mdi:ceiling-light
+    entities: 
+        - light.dr1
+        - light.dr2
+
         
  

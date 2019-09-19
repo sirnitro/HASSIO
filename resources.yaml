@@ -1,18 +1,19 @@
-  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+  - url: /local/community_plugins/mini-graph-card-bundle.js?v=1
     type: module
-  - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
+  - url: /local/community_plugins/slider-entity-row.js?v=1
     type: module
-  - url: /community_plugin/monster-card/monster-card.js
+  - url: /local/community_plugins/mini-media-player-bundle.js?v=1
+    type: module
+  - url: /local/community_plugins/compact-custom-header.js?v=1
+    type: module
+  - url: /local/community_plugins/group-card.js?v=1
+    type: module
+  - url: /local/community_plugins/roku-card.js?v=1
+    type: module
+  - url: /local/community_plugins/fitbit-card.js?v=1
     type: js
-  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
-    type: module
-  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
+
+  - url: /local/community_plugins/monster-card.js?v=1
     type: js
-  - url: /community_plugin/compact-custom-header/compact-custom-header.js
-    type: module
-  - url: /community_plugin/group-card/group-card.js
-    type: module
-  - url: /community_plugin/roku-card/roku-card.js
-    type: module
-  - url: /community_plugin/fitbit-card/fitbit-card.js
+  - url: /local/community_plugins/vertical-stack-in-card.js?v=1
     type: js

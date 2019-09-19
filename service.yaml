@@ -1,0 +1,6 @@
+data:
+  entity_id: remote.roku
+  command:
+    - left
+    - left
+    - select

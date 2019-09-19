@@ -1,0 +1,13 @@
+roku_lr_hulu:
+  sequence:
+    - service: shell_command.roku_lr_hulu
+      entity_id: media_player.lr_roku      
+      data:
+        source: Hulu
+      
+roku_lr_netflix:
+  sequence:
+    - service: shell_command.roku_lr_netflix
+      entity_id: media_player.lr_roku
+      data:
+        source: Netflix

@@ -1,17 +1,17 @@
-  - alias: 'Set dark theme for the night'
-    trigger:
-      - platform: time
-        at: '21:00:00'
-    action:
-      - service: frontend.set_theme
-        data:
-          name: amoled
-          
-  - alias: 'Set theme at startup'
-    trigger:
-     - platform: homeassistant
-       event: start
-    action:
-      service: frontend.set_theme
-      data:
-        name: dark
+#  - alias: 'Set dark theme for the night'
+#    trigger:
+#      - platform: time
+#        at: '21:00:00'
+#    action:
+#      - service: frontend.set_theme
+#        data:
+#          name: amoled
+
+#  - alias: 'Set theme at startup'
+#    trigger:
+#     - platform: homeassistant
+#       event: start
+#    action:
+#      service: frontend.set_theme
+#      data:
+#        name: midnight

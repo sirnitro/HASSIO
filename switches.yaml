@@ -1,0 +1,8 @@
+  - platform: command_line
+    switches:
+      familyroom_tv_power:
+        command_on: 'curl -X POST http://10.10.10.101:8060/keypress/PowerOn'
+        command_off: 'curl -X POST http://10.10.10.101:8060/keypress/PowerOff'
+        command_state: 'curl -s GET http://10.10.10.101:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:OFF:" -e "s:<power-mode>PowerOn</power-mode>:ON:"'
+        value_template: '{{ value == "ON" }}'
+        friendly_name: Family Room TV

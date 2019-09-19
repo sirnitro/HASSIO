@@ -1,0 +1,23 @@
+  cottage_door:
+    name: Cottage Door Open
+    done_message: Cottage Door Closed
+    entity_id: binary_sensor.cottage_binary_sensor
+    state: 'on'
+    repeat: 2
+    can_acknowledge: true
+    skip_first: false
+    notifiers:
+      - prowlc
+      - telegram_bot
+      
+  front_door:
+    name: Front Door Open
+    done_message: Front Door Closed
+    entity_id: binary_sensor.front_door_binary_sensor
+    state: 'on'
+    repeat: 2
+    can_acknowledge: true
+    skip_first: false
+    notifiers:
+      - prowlc
+      - telegram_bot
