@@ -1,0 +1,115 @@
+title: Home
+icon: mdi:home-variant
+
+type: horizontal-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: weather-forecast
+        entity: weather.wilsonscorner
+  - type: vertical-stack
+    cards:
+      - type: glance      
+        title: Lights
+        columns: 4
+        entities: 
+           - entity: light.lrc1
+             name: LR Ceiling 1
+             tap_action:
+               action: toggle
+           - entity: light.lrc2
+             name: LR Ceiling 2 
+             tap_action:
+               action: toggle
+           - entity: light.oc1
+             name: Office C. 1
+             tap_action:
+               action: toggle             
+           - entity: light.oc2
+             name: office C. 2
+             tap_action:
+               action: toggle             
+           - entity: light.mf1
+             tap_action:
+               action: toggle
+           - entity: light.mf2
+             tap_action:
+               action: toggle
+           - entity: light.mf3
+             tap_action:
+               action: toggle
+           - entity: light.mf4
+             tap_action:
+               action: toggle           
+           - entity: light.bath1
+             tap_action:
+               action: toggle           
+           - entity: light.bath2
+             tap_action:
+               action: toggle           
+           - entity: light.bath3
+             tap_action:
+               action: toggle           
+           - entity: light.bath4
+             tap_action:
+               action: toggle 
+
+          
+  - type: vertical-stack
+    cards:
+      - type: glance
+        title: Family
+        columns: 2
+        entities:
+            - person.clint_wilson
+            - person.beth_wilson
+            - sensor.sir_nitro_battery_level
+            - sensor.beth_battery_level
+            - sensor.sir_nitro_battery_state
+            - sensor.beth_battery_state
+            
+            
+      - type: glance
+        title: Doors
+        columns: 2
+        entities:
+           - entity: sensor.front_door
+             name: Front Door
+           - entity: sensor.cottage_door
+             name: Cottage Door
+             
+      - type: glance
+        title: System
+        columns: 2
+        entities:
+            - entity: sensor.processor_use
+              name: CPU Usage
+            - entity: sensor.disk_use_percent_home
+              name: Disk Usage
+         
+          
+#      - type: gauge
+#        entity: sensor.processor_use
+ #       name: CPU Usage
+ #       severity:
+ #         green: 0
+ #         yellow: 45
+ #         red: 85
+
+#      - type: gauge
+#        entity: sensor.disk_use_percent_home
+#        name: Disk Usage
+#        severity:
+#          green: 0
+#          yellow: 50
+#          red: 85
+
+
+
+
+
+# type: custom:group-card
+# card:
+#   type: entities
+#   title: bathroom
+# group: group.bathroom

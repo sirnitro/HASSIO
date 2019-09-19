@@ -5,13 +5,197 @@ cards:
   - type: vertical-stack
     cards:
       - type: picture
-        image: /local/living-room.png
+        image: /local/logos/living-room.png
   - type: horizontal-stack
     cards:
-      - type: light
-        entity: light.lrc1
-        name: LR Ceiling 1
-      - type: light
-        entity: light.lrc2
-        name: LR Ceiling 2
+      - type: entities
+        title: Lighting
+        entities:
+           - type: custom:slider-entity-row
+             entity: light.lrc1
+             name: Ceiling 1
+
+           - type: custom:slider-entity-row
+             entity: light.lrc2
+             name: Ceiling 2  
+
+
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/logos/lr-control.png
+        tap_action:
+          action: call-service
+          service: shell_command.roku_lr_home
+          service_data:
+             entity_id: media_player.clint_office
+
+  - type: vertical-stack
+    cards:
+
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/poweron.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_on
+              service_data:
+                entity_id: media_player.clint_office                
+          - type: picture
+            image: /local/icons/home.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_home
+              service_data:
+                entity_id: media_player.clint_office               
+          - type: picture
+            image: /local/icons/poweroff.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_off
+              service_data:
+                entity_id: media_player.clint_office
+
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/hulu.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_hulu
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/netflix.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_netflix
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/prime.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_prime
+              service_data:
+                entity_id: media_player.clint_office
+                
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/showtime.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_showtime
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/vudu.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_vudu
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/youtube.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_youtube
+              service_data:
+                entity_id: media_player.clint_office
+                
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/logos/lr-panel.png
+        tap_action:
+          action: call-service
+          service: shell_command.roku_lr_home
+          service_data:
+             entity_id: media_player.clint_office                
+                
+  - type: vertical-stack
+    cards:
+
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/volume-up.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_volume_up
+              service_data:
+                entity_id: media_player.clint_office                
+          - type: picture
+            image: /local/icons/arrow_gloss_blue_up.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_up
+              service_data:
+                entity_id: media_player.clint_office               
+          - type: picture
+            image: /local/icons/volume-down.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_volume_down
+              service_data:
+                entity_id: media_player.clint_office
+
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/arrow_gloss_blue_left.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_left
+              service_data:
+                entity_id: media_player.clint_office
+                
+          - type: picture
+            image: /local/icons/enter.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_select
+              service_data:
+                entity_id: media_player.clint_office
+                
+          - type: picture
+            image: /local/icons/arrow_gloss_blue_right.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_right
+              service_data:
+                entity_id: media_player.clint_office
+                
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/back.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_back
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/arrow_gloss_blue_down.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_down
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/asterisk.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_lr_info
+              service_data:
+                entity_id: media_player.clint_office
+                
+      - type: custom:monster-card
+        card:
+          type: entities
+        filter:
+          include:
+            - entity_id: sensor.*
 

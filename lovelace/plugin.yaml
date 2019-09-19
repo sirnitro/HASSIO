@@ -33,6 +33,6 @@ cards:
         entity: sensor.tracker_calories
         icon_color: red
     type: "custom:fitbit-card"
-icon: "mdi:run-fast"
+icon: "mdi:emoticon-poop"
 title: PT
 type: horizontal-stack

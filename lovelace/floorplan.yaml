@@ -3,7 +3,7 @@ icon: mdi:floor-plan
 panel: yes
 cards:
   - type: picture-elements
-    image: /local/floorplan.PNG
+    image: /local/images/floorplan.PNG
     elements:
 #######MASTER BEDROOM
        - type: state-icon

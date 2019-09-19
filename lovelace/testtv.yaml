@@ -1,0 +1,90 @@
+title: Television
+icon: mdi:television-box
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/logos/tv.png
+        tap_action:
+          action: call-service
+          service: shell_command.roku_office_home
+          service_data:
+             entity_id: media_player.clint_office
+
+  - type: vertical-stack
+    cards:
+
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/poweron.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_on
+              service_data:
+                entity_id: media_player.clint_office                
+          - type: picture
+            image: /local/icons/home.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_home
+              service_data:
+                entity_id: media_player.clint_office               
+          - type: picture
+            image: /local/icons/poweroff.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_off
+              service_data:
+                entity_id: media_player.clint_office
+
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/hulu.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_hulu
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/netflix.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_netflix
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/prime.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_prime
+              service_data:
+                entity_id: media_player.clint_office
+                
+      - type: horizontal-stack
+        cards:
+          - type: picture
+            image: /local/icons/showtime.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_showtime
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/vudu.jpg
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_vudu
+              service_data:
+                entity_id: media_player.clint_office
+          - type: picture
+            image: /local/icons/youtube.png
+            tap_action:
+              action: call-service
+              service: shell_command.roku_office_youtube
+              service_data:
+                entity_id: media_player.clint_office
+                
+ 

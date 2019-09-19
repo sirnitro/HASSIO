@@ -1,0 +1,67 @@
+title: Television
+icon: mdi:television-box
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: picture
+        image: /local/logos/tv.png
+
+  - type: vertical-stack
+    cards:
+
+      - type: horizontal-stack
+        cards:
+          - type: picture-entity
+          - name: roku_hulu
+            entities:
+               - script.roku_lr_hulu
+            tap_action:
+                action:
+                  domain: script
+                  service: shell_command.roku_lr_hulu
+
+          - type: picture-entity
+            entity: switch.wireless
+            tap_action:
+                action: toggle
+            state_image:
+              "on": /local/icons/netflix.jpg
+              "off": /local/icons/netflix.jpg
+              
+          - type: picture-entity
+            entity: switch.wireless
+            tap_action:
+                action: toggle
+            state_image:
+              "on": /local/icons/prime.jpg
+              "off": /local/icons/prime.jpg
+              
+      - type: horizontal-stack
+        cards:
+          - type: picture-entity
+            entity: switch.wireless
+            tap_action:
+                action: toggle
+            state_image:
+              "on": /local/icons/showtime.jpg
+              "off": /local/icons/showtime.jpg
+              
+          - type: picture-entity
+            entity: switch.wireless
+            tap_action:
+                action: toggle
+            state_image:
+              "on": /local/icons/vudu.jpg
+              "off": /local/icons/vudu.jpg
+
+          - type: picture-entity
+            entity: switch.wireless
+            tap_action:
+                action: toggle
+            state_image:
+              "on": /local/icons/youtube.png
+              "off": /local/icons/youtube.png
+              
+    
+      

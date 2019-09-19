@@ -1,0 +1,10 @@
+title: PT
+icon: mdi:emoticon-poop
+type: horizontal-stack
+cards:
+ - type: entities
+   entities:
+      - light.colored1
+      - type: custom:slider-entity-row
+        entity: light.bath1
+      

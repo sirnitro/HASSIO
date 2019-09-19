@@ -1,23 +1,9 @@
-title: Roku
-type: 'custom:roku-card'
-entity: media_player.lr_roku
-tv: true
-apps:
-#  - id: Netflix
-#    icon: /local/Netflix.jpg
-#  - id: Hulu
-#    icon: /local/Hulu.jpg
-volume_up:
-  tap_action:
-    action: call-service
-    service: remote.send_command
+type: custom:roku-card
+  entity: media_player.bedroom_tv
+  name: Bedroom TV
+  theme: darkpurple
+  tv: true
+  power:
+    service: switch.turn_on
     service_data:
-      entity_id: remote.lr_roku
-      command: play
-volume_down:
-  dbltap_action:
-    action: call-service
-    service: remote.send_command
-    service_data:
-      entity_id: remote.lr_roku
-      command: play
+       entity_id: switch.bedroom_tv_power
