@@ -2,7 +2,7 @@
 
 ## History:
 
-I begin playing with home automation all the way back with X10. X10 was very unreliable, so I gave up on it for awhile, then the wink hub came out. I purchased one and started off buying bulbs. My wink hub had poor support for some items I was trying to use, and let's face it for a tinker/hacker like me, it had a LOT to be desired.
+I began playing with home automation all the way back with X10. X10 was very unreliable, so I gave up on it for awhile, then the wink hub came out. I purchased one and started off buying bulbs. My wink hub had poor support for some items I was trying to use, and let's face it for a tinker/hacker like me, it had a LOT to be desired.
 
 Welcome Home Assistant.
 
