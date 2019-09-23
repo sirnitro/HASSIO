@@ -16,8 +16,8 @@ I am running HASS.IO on a Raspberry Pi 3+. I will be adding to this as I am able
 ## The Man Cave
 <img src="https://github.com/sirnitro/HASSIO/blob/master/site-images/Man-Cave.PNG">
 
-#Current Hardware:
-##Network Hardware
+# Current Hardware:
+## Network Hardware
    - Netgear Orbi AP (1 Satellite)
    - Sophos UTM 320
    - 2x Netgear Gigabit Switches
