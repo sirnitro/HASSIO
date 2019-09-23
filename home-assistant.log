@@ -1,0 +1,251 @@
+2019-09-19 21:00:21 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-09-19 21:00:36 WARNING (MainThread) [homeassistant.setup] Setup of roku is taking over 10 seconds.
+2019-09-19 21:00:36 WARNING (MainThread) [homeassistant.setup] Setup of group is taking over 10 seconds.
+2019-09-19 21:00:36 WARNING (MainThread) [homeassistant.setup] Setup of tuya is taking over 10 seconds.
+2019-09-19 21:00:40 ERROR (MainThread) [homeassistant.setup] Error during setup of component roku
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.7/site-packages/urllib3/util/connection.py", line 80, in create_connection
+    raise err
+  File "/usr/local/lib/python3.7/site-packages/urllib3/util/connection.py", line 70, in create_connection
+    sock.connect(sa)
+OSError: [Errno 113] Host is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 355, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/local/lib/python3.7/http/client.py", line 1244, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1290, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1239, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 966, in send
+    self.connect()
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connection.py", line 183, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x71fd3c10>: Failed to establish a new connection: [Errno 113] Host is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.7/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.10.10.5', port=8060): Max retries exceeded with url: /query/device-info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71fd3c10>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 172, in _async_setup_component
+    component.setup, hass, processed_config  # type: ignore
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/roku/__init__.py", line 56, in setup
+    _setup_roku(hass, config, conf)
+  File "/usr/src/homeassistant/homeassistant/components/roku/__init__.py", line 105, in _setup_roku
+    r_info = roku.device_info
+  File "/usr/local/lib/python3.7/site-packages/roku/core.py", line 260, in device_info
+    resp = self._get('/query/device-info')
+  File "/usr/local/lib/python3.7/site-packages/roku/core.py", line 209, in _get
+    return self._call('GET', path, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/roku/core.py", line 226, in _call
+    resp = func(url, timeout=self.timeout, *args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/requests/sessions.py", line 546, in get
+    return self.request('GET', url, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='10.10.10.5', port=8060): Max retries exceeded with url: /query/device-info (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x71fd3c10>: Failed to establish a new connection: [Errno 113] Host is unreachable'))
+2019-09-19 21:00:40 WARNING (MainThread) [homeassistant.setup] Setup of hacs is taking over 10 seconds.
+2019-09-19 21:00:41 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform roku.media_player: Unable to set up component.
+2019-09-19 21:00:41 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform roku.media_player: Unable to set up component.
+2019-09-19 21:00:41 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform roku.media_player: Unable to set up component.
+2019-09-19 21:00:46 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 399, in _async_add_entity
+    raise HomeAssistantError(msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: device_tracker.beth. Platform mobile_app does not generate unique IDs
+2019-09-19 21:00:46 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity_platform.py", line 399, in _async_add_entity
+    raise HomeAssistantError(msg)
+homeassistant.exceptions.HomeAssistantError: Entity id already exists: device_tracker.clint. Platform mobile_app does not generate unique IDs
+2019-09-19 21:00:47 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform roku.remote: Unable to set up component.
+2019-09-19 21:00:47 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform roku.remote: Unable to set up component.
+2019-09-19 21:00:47 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform roku.remote: Unable to set up component.
+2019-09-19 21:00:50 WARNING (MainThread) [zigpy.zdo] [0x0000:zdo] Unsupported ZDO cluster id 0x8038
+2019-09-19 21:00:51 WARNING (MainThread) [zigpy.zdo] [0x0000:zdo] Unknown ZDO cluster 0x8038
+2019-09-19 21:01:42 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform roku.media_player: Unable to set up component.
+2019-09-19 21:01:42 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform roku.remote: Unable to set up component.
+2019-09-19 21:58:44 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 237, in watched_entity_change
+    await self.begin_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 249, in begin_alerting
+    await self._notify()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 288, in _notify
+    await self._send_notification_message(message)
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 316, in _send_notification_message
+    await self.hass.services.async_call(DOMAIN_NOTIFY, target, msg_payload)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1210, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: Unable to find service notify/telegram_bot
+2019-09-19 21:58:48 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 239, in watched_entity_change
+    await self.end_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 258, in end_alerting
+    self._cancel()
+TypeError: 'NoneType' object is not callable
+2019-09-19 22:00:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.colored1 is taking over 10 seconds
+2019-09-19 22:18:38 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/bellows/zigbee/application.py", line 368, in request
+    res = await asyncio.wait_for(req.send, timeout=APS_ACK_TIMEOUT)
+  File "/usr/local/lib/python3.7/asyncio/tasks.py", line 442, in wait_for
+    return fut.result()
+zigpy.exceptions.DeliveryError: [0xe754:0:0x8006]: message send failure: EmberStatus.DELIVERY_FAILED
+2019-09-19 23:00:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.bath3 is taking over 10 seconds
+2019-09-19 23:00:28 ERROR (MainThread) [homeassistant.helpers.entity] Update for light.bath3 fails
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 261, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 441, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/tuya/__init__.py", line 150, in update
+    self.tuya.update()
+  File "/usr/local/lib/python3.7/site-packages/tuyaha/devices/base.py", line 43, in update
+    self.obj_id, 'QueryDevice', namespace='query')
+  File "/usr/local/lib/python3.7/site-packages/tuyaha/tuyaapi.py", line 140, in device_control
+    response = self._request(action, namespace, devId, param)
+  File "/usr/local/lib/python3.7/site-packages/tuyaha/tuyaapi.py", line 168, in _request
+    _LOGGER.warning("request error, status code is %d, device %s", devId, response.status_code)
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1390, in warning
+    self._log(WARNING, msg, args, **kwargs)
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1514, in _log
+    self.handle(record)
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1524, in handle
+    self.callHandlers(record)
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1586, in callHandlers
+    hdlr.handle(record)
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 894, in handle
+    self.emit(record)
+  File "/usr/src/homeassistant/homeassistant/components/system_log/__init__.py", line 176, in emit
+    record, stack, _figure_out_source(record, stack, self.hass)
+  File "/usr/src/homeassistant/homeassistant/components/system_log/__init__.py", line 102, in __init__
+    self.message = record.getMessage()
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: %d format: a number is required, not str
+2019-09-19 23:00:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of light.bath1 is taking over 10 seconds
+2019-09-20 01:31:13 ERROR (MainThread) [homeassistant.components.wwlln.geo_location] Error while updating WWLLN data: Invalid JSON found from http://wwlln.net/new/map/data/current.json
+2019-09-20 04:38:16 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 237, in watched_entity_change
+    await self.begin_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 249, in begin_alerting
+    await self._notify()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 288, in _notify
+    await self._send_notification_message(message)
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 316, in _send_notification_message
+    await self.hass.services.async_call(DOMAIN_NOTIFY, target, msg_payload)
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1210, in async_call
+    raise ServiceNotFound(domain, service) from None
+homeassistant.exceptions.ServiceNotFound: Unable to find service notify/telegram_bot
+2019-09-20 04:38:31 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 239, in watched_entity_change
+    await self.end_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 258, in end_alerting
+    self._cancel()
+TypeError: 'NoneType' object is not callable
+2019-09-20 05:57:29 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 239, in watched_entity_change
+    await self.end_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 258, in end_alerting
+    self._cancel()
+TypeError: 'NoneType' object is not callable
+2019-09-20 05:58:00 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/bellows/zigbee/application.py", line 368, in request
+    res = await asyncio.wait_for(req.send, timeout=APS_ACK_TIMEOUT)
+  File "/usr/local/lib/python3.7/asyncio/tasks.py", line 442, in wait_for
+    return fut.result()
+zigpy.exceptions.DeliveryError: [0xe754:0:0x8006]: message send failure: EmberStatus.DELIVERY_FAILED
+2019-09-20 05:58:19 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 239, in watched_entity_change
+    await self.end_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 258, in end_alerting
+    self._cancel()
+TypeError: 'NoneType' object is not callable
+2019-09-20 06:06:05 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 239, in watched_entity_change
+    await self.end_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 258, in end_alerting
+    self._cancel()
+TypeError: 'NoneType' object is not callable
+2019-09-20 06:10:43 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-09-20 06:10:43 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-09-20 06:36:24 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 164, in async_send_delete_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+KeyError: 'device_tracker'
+2019-09-20 06:38:33 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 239, in watched_entity_change
+    await self.end_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 258, in end_alerting
+    self._cancel()
+TypeError: 'NoneType' object is not callable
+2019-09-20 07:02:07 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 239, in watched_entity_change
+    await self.end_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 258, in end_alerting
+    self._cancel()
+TypeError: 'NoneType' object is not callable
+2019-09-20 07:35:46 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 239, in watched_entity_change
+    await self.end_alerting()
+  File "/usr/src/homeassistant/homeassistant/components/alert/__init__.py", line 258, in end_alerting
+    self._cancel()
+TypeError: 'NoneType' object is not callable
+2019-09-20 07:47:31 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 134, in async_send_add_or_update_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+KeyError: 'device_tracker'
+2019-09-20 07:47:32 WARNING (SyncWorker_3) [urllib3.connectionpool] Connection pool is full, discarding connection: 169.254.169.254

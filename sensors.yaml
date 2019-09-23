@@ -104,6 +104,19 @@
           {% else %}
             mdi:door
           {% endif %}   
+
+  - platform: template
+    sensors:
+      battery_iphone_clint:
+        friendly_name: Clint Battery
+        unit_of_measurement: '%'
+        value_template: >-
+            {%- if state_attr('device_tracker.clint', 'battery') %}
+                {{ state_attr('device_tracker.clint', 'battery')|round }}
+            {% else %}
+                {{ states('sensor.battery_iphone') }}
+            {%- endif %}
+        device_class: battery
           
 #  - platform: weatheralerts
 #    sameid: '018169'

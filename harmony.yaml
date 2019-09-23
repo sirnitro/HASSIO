@@ -1,4 +1,4 @@
-remote;
+remote:
   - platform: harmony
     name: Living Room
     activity: Watch TV

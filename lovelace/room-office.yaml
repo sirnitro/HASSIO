@@ -27,7 +27,7 @@ cards:
       - type: horizontal-stack
         cards:
           - type: picture-entity
-            entity: switch.printer
+            entity: switch.tbd
             tap_action:
                 action: toggle
             state_image:
@@ -35,7 +35,8 @@ cards:
               "off": /local/logos/off.png
 
           - type: picture-entity
-            entity: switch.wireless
+            entity: switch.printer
+            name: 3D Printer
             tap_action:
                 action: toggle
             state_image:

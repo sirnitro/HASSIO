@@ -20,7 +20,7 @@ views:
 #  - !include /config/lovelace/testtv.yaml
 #  - !include /config/lovelace/test.yaml
 #  - !include /config/lovelace/lighting.yaml
-#  - !include /config/lovelace/plugin.yaml
+  - !include /config/lovelace/plugin.yaml
 
 #resources: !include /config/resources.yaml
 

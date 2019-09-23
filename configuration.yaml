@@ -1,6 +1,10 @@
 # Configure a default setup of Home Assistant (frontend, api, etc
 default_config:
+homeassistant:
+  customize: !include customize.yaml
 
+
+  
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
@@ -17,6 +21,9 @@ sensor: !include sensors.yaml
 alert: !include alerts.yaml
 switch: !include switches.yaml
 shell_command: !include shell_commands.yaml
+zone: !include zones.yaml
+
+
 
 hassio:
 discovery:

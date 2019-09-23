@@ -18,39 +18,36 @@ cards:
   - type: vertical-stack
     cards:
 
-      - type: glance
-        title: Doors
-        columns: 2
-        theme: dark_red
-        entities:
-           - entity: sensor.front_door
-             name: Front Door
-           - entity: sensor.cottage_door
-             name: Cottage Door
+
 
       - type: glance
         title: Family
-        columns: 2
-        theme: dark_red
+        columns: 3
         entities:
-            - entity: person.clint_wilson
+            - entity: device_tracker.clint
               name: Clint's Information
-            - entity: person.beth_wilson
+            - entity: device_tracker.beth
               name: Beth's Information
+            - entity: device_tracker.dakota
+              name: Dakota's Info
+            
             - entity: sensor.sir_nitro_battery_level
               name: Battery Level
             - entity: sensor.beth_battery_level
               name: Battery Level
+
+            - entity: sensor.distance
+              
             - entity: sensor.sir_nitro_battery_state
               name: Battery State
             - entity: sensor.beth_battery_state
               name: Battery State
+            - entity: sensor.elevation
   
              
       - type: glance
         title: System
         columns: 2
-        theme: dark_red
         entities:
             - entity: sensor.processor_use
               name: CPU Usage
@@ -64,10 +61,19 @@ cards:
 
   - type: vertical-stack
     cards:            
+
+      - type: glance
+        title: Doors
+        columns: 2
+        entities:
+           - entity: sensor.front_door
+             name: Front Door
+           - entity: sensor.cottage_door
+             name: Cottage Door
+
       - type: glance      
         title: Master Bedroom
         columns: 4
-        theme: dark_red
         entities:
            - entity: light.mf1
              tap_action:
@@ -114,7 +120,7 @@ cards:
                action: toggle
 
       - type: glance
-        title: Office
+        title: Man Cave
         Columns: 4
         entities:    
            - entity: light.oc1
