@@ -22,6 +22,14 @@ alert: !include alerts.yaml
 switch: !include switches.yaml
 shell_command: !include shell_commands.yaml
 zone: !include zones.yaml
+device_tracker: !include devices.yaml
+
+panel_iframe:
+   printer: 
+     title: 'Nitro 3D'
+     icon: mdi:printer-3d-nozzle-outline
+     url: !secret octo_rem
+     require_admin: true
 
 
 
@@ -29,7 +37,7 @@ hassio:
 discovery:
   ignore:
     - wink
-#    - roku
+    - roku
 
 # Text to speech
 tts:
@@ -56,15 +64,23 @@ wunderlist:
   client_id: !secret wunder_id
   access_token: !secret wunder_token
 
-#octoprint:
-#   host: !secret octo_host
-#   api_key: !secret octo_key
+octoprint:
+   host: !secret octo_host
+   api_key: !secret octo_key
+   name: "Nitro 3D"
+   sensors:
+      monitored_conditions:
+           - 'Current State'
+           - 'Job Percentage'
+           - 'Temperatures'
+           - 'Time Elapsed'
+           - 'Time Remaining'
 
-#binary_sensor:
-#    - platform: octoprint
-#      monitored_conditions:
-#        - 'Printing'
-#        - 'Printing Error'
+binary_sensor:
+    - platform: octoprint
+      monitored_conditions:
+          - 'Printing'
+          - 'Printing Error'
 
 tplink:
   switch:
@@ -111,12 +127,12 @@ telegram_bot:
     api_key: !secret telegram_api
     allowed_chat_ids:
       - !secret telegram_chatid_c
-
-roku:
-  - host: !secret roku_lr_host
-  - host: !secret roku_mb_host
-  - host: !secret roku_office_host
-  - host: !secret roku_dakota_host
+#
+#roku:
+#  - host: !secret roku_lr_host
+#  - host: !secret roku_mb_host
+#  - host: !secret roku_office_host
+#  - host: !secret roku_dakota_host
   
 mqtt:
   broker: soldier.cloudmqtt.com

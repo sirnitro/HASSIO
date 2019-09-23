@@ -20,7 +20,14 @@ views:
 #  - !include /config/lovelace/testtv.yaml
 #  - !include /config/lovelace/test.yaml
 #  - !include /config/lovelace/lighting.yaml
-  - !include /config/lovelace/plugin.yaml
+#  - !include /config/lovelace/plugin.yaml
+  - !include /config/lovelace/octoprint.yaml
+  
+ # - cch:
+ #     options: clock
+ #     hide_config: true
+ #     hide_help: true
+ #     swipe: true
 
 #resources: !include /config/resources.yaml
 

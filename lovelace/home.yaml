@@ -24,8 +24,9 @@ cards:
         title: Family
         columns: 3
         entities:
-            - entity: device_tracker.clint
+            - entity: device_tracker.owntracks_clint
               name: Clint's Information
+              picture: /local/images/sirnitro.png
             - entity: device_tracker.beth
               name: Beth's Information
             - entity: device_tracker.dakota

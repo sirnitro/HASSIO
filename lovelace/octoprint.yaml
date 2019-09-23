@@ -1,0 +1,8 @@
+title: Nitro 3D
+icon: mdi:printer-3d-nozzle-outline
+type: horizontal-stack
+cards:
+  - type: iframe
+    url: https://www.getanywhere.io/app/devices
+    #url: http://10.10.10.40
+    aspect_ration: 100%
