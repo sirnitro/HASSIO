@@ -10,7 +10,7 @@ views:
 #  - !include /config/lovelace/room-secondbed.yaml
 #  - !include /config/lovelace/room-thirdbed.yaml
 #  - !include /config/lovelace/room-pantry.yaml
-#  - !include /config/lovelace/room-kitchenhall.yaml
+  - !include /config/lovelace/room-kitchenhall.yaml
 #  - !include /config/lovelace/lights.yaml
 #  - !include /config/lovelace/roku.yaml
 #  - !include /config/lovelace/network.yaml
