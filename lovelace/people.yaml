@@ -5,16 +5,24 @@ cards:
   - type: vertical-stack
     cards:
       - type: glance
-        title: Family
+        title: Clint
+        columns: 3
+        entities:
+        #    - entity: device_tracker.sir_nitro
+         #     name: Sir Nitro
+            - entity: person.clint_wilson
+            - entity: sensor.battery_level
+            - entity: sensor.battery_state
+            - entity: sensor.connection_type
+            - entity: sensor.geocoded_location
+            - entity: device_tracker.sir_nitro_2
+
+
+      - type: glance
+        title: Beth
         columns: 2
         entities:
-            - entity: device_tracker.sir_nitro
-              name: Sir Nitro
-            - entity: person.clint_wilson
-
-            - entity: device_tracker.beth
-              name: Beth's Information
+        
             - entity: person.beth_wilson
-
             
               

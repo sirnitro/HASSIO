@@ -28,24 +28,13 @@ cards:
           #    name: Clint's Information
           #    picture: /local/images/sirnitro.png
             - entity: person.clint_wilson           
-            - entity: device_tracker.beth
-              name: Beth's Information
-            - entity: device_tracker.dakota
-              name: Dakota's Info
-            
-            - entity: sensor.sir_nitro_battery_level
-              name: Battery Level
-            - entity: sensor.beth_battery_level
-              name: Battery Level
-
-            - entity: sensor.distance
-              
-            - entity: sensor.sir_nitro_battery_state
-              name: Battery State
-            - entity: sensor.beth_battery_state
-              name: Battery State
-            - entity: sensor.elevation
-  
+            - entity: person.beth_wilson
+            - entity: person.dakota_wilson
+            - entity: sensor.activity
+            - entity: sensor.battery_level
+            - entity: sensor.battery_state
+            - entity: sensor.last_update_trigger
+            - entity: sensor.geocoded_location
              
       - type: glance
         title: System
