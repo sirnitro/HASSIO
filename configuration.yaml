@@ -38,7 +38,8 @@ discovery:
   ignore:
     - wink
     - roku
-
+    - homekit
+    - netgear_router
 # Text to speech
 tts:
   - platform: google_translate
@@ -134,17 +135,17 @@ telegram_bot:
 #  - host: !secret roku_office_host
 #  - host: !secret roku_dakota_host
   
-mqtt:
-  broker: soldier.cloudmqtt.com
-  port: !secret mqtt_port
-  username: !secret mqtt_ha
-  password: !secret mqtt_pass
+#mqtt:
+#  broker: soldier.cloudmqtt.com
+#  port: !secret mqtt_port
+#  username: !secret mqtt_ha
+#  password: !secret mqtt_pass
   
-owntracks:
-  max_gps_accuracy: 200
-  waypoints: true
-  mqtt_topic: "owntracks/#"
-  events_only: true
+#owntracks:
+#  max_gps_accuracy: 200
+#  waypoints: true
+#  mqtt_topic: "owntracks/#"
+#  events_only: true
   
 recorder:
   db_url: !secret sql_info

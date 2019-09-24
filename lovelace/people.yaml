@@ -1,0 +1,20 @@
+title: Man Cave
+icon: mdi:account-multiple
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: glance
+        title: Family
+        columns: 2
+        entities:
+            - entity: device_tracker.sir_nitro
+              name: Sir Nitro
+            - entity: person.clint_wilson
+
+            - entity: device_tracker.beth
+              name: Beth's Information
+            - entity: person.beth_wilson
+
+            
+              

@@ -1,29 +1,66 @@
-2019-09-22 23:13:32 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
-2019-09-22 23:13:43 ERROR (SyncWorker_9) [homeassistant.components.octoprint] Endpoint: printer Failed to update OctoPrint status.   Error: 409 Client Error: CONFLICT for url: http://10.10.10.40:80/api/printer
-2019-09-22 23:13:46 WARNING (MainThread) [homeassistant.setup] Setup of hacs is taking over 10 seconds.
-2019-09-22 23:13:50 WARNING (MainThread) [homeassistant.setup] Setup of group is taking over 10 seconds.
-2019-09-22 23:13:50 WARNING (MainThread) [homeassistant.setup] Setup of person is taking over 10 seconds.
-2019-09-22 23:13:57 WARNING (MainThread) [homeassistant.components.weather] Setup of platform met is taking over 10 seconds.
-2019-09-22 23:14:27 ERROR (MainThread) [hacs.repository.plugin.PiotrMachowski.Home-Assistant-Lovelace-HTML-Jinja2-Template-card] Repostitory structure not compliant
-2019-09-22 23:14:27 ERROR (MainThread) [hacs] Validation for PiotrMachowski/Home-Assistant-Lovelace-HTML-Jinja2-Template-card failed.
-2019-09-22 23:14:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:14:37 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_battery
-2019-09-22 23:15:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:15:37 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_battery
-2019-09-22 23:16:23 ERROR (MainThread) [frontend.js.latest.201908281] http://automation.wilsons.local:8123/lovelace/0:1:1 Expected identifier, string or number
-2019-09-22 23:16:23 ERROR (MainThread) [frontend.js.latest.201908281] http://automation.wilsons.local:8123/community_plugin/fitbit-card/fitbit-card.js?v=5:58:694 Expected identifier, string or number
-2019-09-22 23:16:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:16:37 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_battery
-2019-09-22 23:17:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:17:37 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_battery
-2019-09-22 23:18:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:18:37 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_battery
-2019-09-22 23:19:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:20:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:20:37 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_battery
-2019-09-22 23:21:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:21:37 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_battery
-2019-09-22 23:22:28 ERROR (updater) [telegram.ext.updater] Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
-2019-09-22 23:22:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:23:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
-2019-09-22 23:23:37 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_battery
+2019-09-23 23:09:31 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-09-23 23:09:42 ERROR (SyncWorker_15) [homeassistant.components.octoprint] Endpoint: printer Failed to update OctoPrint status.   Error: 409 Client Error: CONFLICT for url: http://10.10.10.40:80/api/printer
+2019-09-23 23:09:45 WARNING (MainThread) [homeassistant.setup] Setup of tuya is taking over 10 seconds.
+2019-09-23 23:09:48 WARNING (MainThread) [homeassistant.setup] Setup of hacs is taking over 10 seconds.
+2019-09-23 23:09:48 WARNING (MainThread) [homeassistant.setup] Setup of group is taking over 10 seconds.
+2019-09-23 23:09:48 WARNING (MainThread) [homeassistant.setup] Setup of person is taking over 10 seconds.
+2019-09-23 23:09:53 ERROR (SyncWorker_2) [homeassistant.components.ios.notify] The notify.ios platform was loaded but no devices exist! Please check the documentation at https://home-assistant.io/ecosystem/ios/notifications/ for more information
+2019-09-23 23:09:58 WARNING (MainThread) [zigpy.zdo] [0x0000:zdo] Unsupported ZDO cluster id 0x8038
+2019-09-23 23:09:58 WARNING (MainThread) [zigpy.zdo] [0x0000:zdo] Unknown ZDO cluster 0x8038
+2019-09-23 23:10:09 ERROR (MainThread) [homeassistant.setup] Error handling when_setup callback for mqtt
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/setup.py", line 305, in when_setup
+    await when_setup_cb(hass, component)
+  File "/usr/src/homeassistant/homeassistant/components/owntracks/__init__.py", line 144, in async_connect_mqtt
+    context.mqtt_topic, async_handle_mqtt_message, 1
+  File "/usr/src/homeassistant/homeassistant/components/mqtt/__init__.py", line 443, in async_subscribe
+    async_remove = await hass.data[DATA_MQTT].async_subscribe(
+KeyError: 'mqtt'
+2019-09-23 23:10:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
+2019-09-23 23:12:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
+2019-09-23 23:12:35 ERROR (updater) [telegram.ext.updater] Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+2019-09-23 23:13:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
+2019-09-23 23:14:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
+2019-09-23 23:14:40 ERROR (updater) [telegram.ext.updater] Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+2019-09-23 23:14:50 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 164, in async_send_delete_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+KeyError: 'device_tracker'
+2019-09-23 23:14:53 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 164, in async_send_delete_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+KeyError: 'device_tracker'
+2019-09-23 23:14:56 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 164, in async_send_delete_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+KeyError: 'device_tracker'
+2019-09-23 23:15:03 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 164, in async_send_delete_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+KeyError: 'device_tracker'
+2019-09-23 23:15:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
+2019-09-23 23:15:37 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 164, in async_send_delete_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+KeyError: 'device_tracker'
+2019-09-23 23:16:32 ERROR (MainThread) [homeassistant.components.mobile_app.webhook] Refusing to update non-registered sensor: 187f3c85f8d640dec263ea6360e287c33528e1f22d937007251afeedc5f4ac9b_mobile_app_lr_tablet_availability
+2019-09-23 23:16:45 ERROR (updater) [telegram.ext.updater] Error while getting Updates: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+2019-09-23 23:16:47 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 164, in async_send_delete_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+  File "/usr/src/homeassistant/homeassistant/components/alexa/entities.py", line 128, in __init__
+    self.entity_conf = config.entity_config.get(entity.entity_id, {})
+AttributeError: 'NoneType' object has no attribute 'entity_id'
+2019-09-23 23:16:47 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/alexa/state_report.py", line 164, in async_send_delete_message
+    alexa_entity = ENTITY_ADAPTERS[domain](hass, config, hass.states.get(entity_id))
+  File "/usr/src/homeassistant/homeassistant/components/alexa/entities.py", line 128, in __init__
+    self.entity_conf = config.entity_config.get(entity.entity_id, {})
+AttributeError: 'NoneType' object has no attribute 'entity_id'

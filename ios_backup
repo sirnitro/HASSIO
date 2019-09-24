@@ -1,0 +1,121 @@
+{
+    "devices": {
+        "Clint ": {
+            "app": {
+                "buildNumber": 4,
+                "bundleIdentifer": "io.robbie.HomeAssistant",
+                "versionNumber": "1.5.1"
+            },
+            "battery": {
+                "level": 38,
+                "state": "Unplugged"
+            },
+            "device": {
+                "localizedModel": "iPhone",
+                "model": "iPhone",
+                "name": "Sir Nitro",
+                "permanentID": "854B8692-09F2-41A7-800C-919190B9CBA9",
+                "systemName": "iOS",
+                "systemVersion": "13.1",
+                "type": "iPhone 7 Plus"
+            },
+            "deviceId": "Clint ",
+            "lastSeenAt": "2019-09-23T22:33:14.012034",
+            "permissions": [
+                "notifications",
+                "location"
+            ],
+            "pushId": "f6b107de-bd07-3731-b039-f9ad0e505d34",
+            "pushSounds": [],
+            "pushToken": "This space intentionally left blank"
+        },
+        "Clint-iOS ": {
+            "app": {
+                "buildNumber": 4,
+                "bundleIdentifer": "io.robbie.HomeAssistant",
+                "versionNumber": "1.5.1"
+            },
+            "battery": {
+                "level": 38,
+                "state": "Unplugged"
+            },
+            "device": {
+                "localizedModel": "iPhone",
+                "model": "iPhone",
+                "name": "Sir Nitro",
+                "permanentID": "854B8692-09F2-41A7-800C-919190B9CBA9",
+                "systemName": "iOS",
+                "systemVersion": "13.1",
+                "type": "iPhone 7 Plus"
+            },
+            "deviceId": "Clint-iOS ",
+            "lastSeenAt": "2019-09-23T22:36:32.483688",
+            "permissions": [
+                "notifications",
+                "location"
+            ],
+            "pushId": "f6b107de-bd07-3731-b039-f9ad0e505d34",
+            "pushSounds": [],
+            "pushToken": "This space intentionally left blank"
+        },
+        "beth": {
+            "app": {
+                "buildNumber": 4,
+                "bundleIdentifer": "io.robbie.HomeAssistant",
+                "versionNumber": "1.5.1"
+            },
+            "battery": {
+                "level": 56,
+                "state": "Unplugged"
+            },
+            "device": {
+                "localizedModel": "iPhone",
+                "model": "iPhone",
+                "name": "Beth",
+                "permanentID": "B02D9832-81A2-441B-91BC-1619064C1072",
+                "systemName": "iOS",
+                "systemVersion": "13.0",
+                "type": "iPhone 6s Plus"
+            },
+            "deviceId": "beth",
+            "lastSeenAt": "2019-09-23T15:54:56.867000",
+            "permissions": [
+                "notifications",
+                "location"
+            ],
+            "pushId": "15c58c57-089d-398d-9178-62dbd240be1a",
+            "pushSounds": [],
+            "pushToken": "This space intentionally left blank"
+        },
+        "sir_nitro": {
+            "app": {
+                "buildNumber": 4,
+                "bundleIdentifer": "io.robbie.HomeAssistant",
+                "versionNumber": "1.5.1"
+            },
+            "battery": {
+                "level": 88,
+                "state": "Unplugged"
+            },
+            "device": {
+                "localizedModel": "iPhone",
+                "model": "iPhone",
+                "name": "Sir Nitro",
+                "permanentID": "854B8692-09F2-41A7-800C-919190B9CBA9",
+                "systemName": "iOS",
+                "systemVersion": "12.4",
+                "type": "iPhone 7 Plus"
+            },
+            "deviceId": "sir_nitro",
+            "lastSeenAt": "2019-09-06T15:57:41.315870",
+            "permissions": [
+                "notifications",
+                "location"
+            ],
+            "pushId": "f6b107de-bd07-3731-b039-f9ad0e505d34",
+            "pushSounds": [],
+            "pushToken": "This space intentionally left blank"
+        }
+    },
+    "push": {}
+}
