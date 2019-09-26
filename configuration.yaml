@@ -1,18 +1,11 @@
+# Wilsons Corner
+# configuration.yaml
+# author: SirNitro
+
 # Configure a default setup of Home Assistant (frontend, api, etc
 default_config:
 homeassistant:
   customize: !include customize.yaml
-
-
-  
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
-
-#http:
-#  ssl_certificate: /config/ssl/fullchain.pem
-#  ssl_key: /config/ssl/privkey.pem
-#  base_url: https://automation.wilsons.local:8123
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -22,8 +15,11 @@ alert: !include alerts.yaml
 switch: !include switches.yaml
 shell_command: !include shell_commands.yaml
 zone: !include zones.yaml
-device_tracker: !include devices.yaml
-
+#device_tracker: !include devices.yaml
+map:
+google:
+  client_id: !secret google_id
+  client_secret: !secret google_secret
 panel_iframe:
    printer: 
      title: 'Nitro 3D'
@@ -31,15 +27,15 @@ panel_iframe:
      url: !secret octo_rem
      require_admin: true
 
-
-
 hassio:
+
 discovery:
   ignore:
     - wink
     - roku
     - homekit
     - netgear_router
+
 # Text to speech
 tts:
   - platform: google_translate
@@ -49,16 +45,9 @@ remote:
     name: Living Room
     host: !secret harmony_hub_ip
 
-#sensor:
-#  - platform: glances
-#    host: 127.0.0.1
-#    username: !secret glance_user
-#    password: !secret glance_pass
-#    version: 3
-#    resources:
-#      - 'processor_load'
-#      - 'memory_use_percent'
-#      - 'disk_use_percent'
+weather:
+  - platform: darksky
+    api_key: !secret dark_sky
 
 
 wunderlist:
@@ -128,31 +117,50 @@ telegram_bot:
     api_key: !secret telegram_api
     allowed_chat_ids:
       - !secret telegram_chatid_c
+  
+owntracks:
+  max_gps_accuracy: 200
+  waypoints: true
+  events_only: true
+
+recorder:
+  db_url: !secret sql_info
+  
+
+
+
+#google:
+#   client_id: !secret google_id
+#   client_secret: !secret google_secret
+
+#mqtt:
+#  broker: soldier.cloudmqtt.com
+#  port: !secret mqtt_port
+#  username: !secret mqtt_ha
+#  password: !secret mqtt_pass
+
 #
 #roku:
 #  - host: !secret roku_lr_host
 #  - host: !secret roku_mb_host
 #  - host: !secret roku_office_host
 #  - host: !secret roku_dakota_host
-  
-#mqtt:
-#  broker: soldier.cloudmqtt.com
-#  port: !secret mqtt_port
-#  username: !secret mqtt_ha
-#  password: !secret mqtt_pass
-  
-#owntracks:
-#  max_gps_accuracy: 200
-#  waypoints: true
-#  mqtt_topic: "owntracks/#"
-#  events_only: true
-  
-recorder:
-  db_url: !secret sql_info
-  
-#google:
-#   client_id: !secret google_id
-#   client_secret: !secret google_secret
+
+#sensor:
+#  - platform: glances
+#    host: 127.0.0.1
+#    username: !secret glance_user
+#    password: !secret glance_pass
+#    version: 3
+#    resources:
+#      - 'processor_load'
+#      - 'memory_use_percent'
+#      - 'disk_use_percent'
+
+#http:
+#  ssl_certificate: /config/ssl/fullchain.pem
+#  ssl_key: /config/ssl/privkey.pem
+#  base_url: https://automation.wilsons.local:8123
 
 #binary_sensor:
  #  - platform: ping

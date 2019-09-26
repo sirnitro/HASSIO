@@ -1,4 +1,28 @@
 title: Wilson's Corner (Wabash, Indiana)
+cch:
+  #options: clock
+  #clock_date: true 
+  exceptions:
+    - conditions:
+        user: Kiosk
+      config:
+        disable_sidebar: true
+        header: true
+        swipe: true
+        options: clock
+        clock_date: true
+        hide_tabs: 7,8,9
+    - conditions:
+         user: Beth Wilson
+      config:
+        disable_sidebar: true
+        header: true
+        options: clock
+        clock_date: true
+        hide_tabs: 7,8,9
+        sidebar_closed: true
+
+  
 views:   
   - !include /config/lovelace/home.yaml      
   - !include /config/lovelace/floorplan.yaml
@@ -6,24 +30,26 @@ views:
   - !include /config/lovelace/room-masterbed.yaml
   - !include /config/lovelace/room-masterbath.yaml
   - !include /config/lovelace/room-office.yaml
-#  - !include /config/lovelace/room-secondbath.yaml
+  - !include /config/lovelace/room-kitchenhall.yaml
+  - !include /config/lovelace/fitbit.yaml
+  - !include /config/lovelace/octoprint.yaml
+  - !include /config/lovelace/people.yaml
+  - !include /config/lovelace/cal.yaml
+
+  #  - !include /config/lovelace/room-secondbath.yaml
 #  - !include /config/lovelace/room-secondbed.yaml
 #  - !include /config/lovelace/room-thirdbed.yaml
 #  - !include /config/lovelace/room-pantry.yaml
-  - !include /config/lovelace/room-kitchenhall.yaml
-#  - !include /config/lovelace/lights.yaml
-#  - !include /config/lovelace/roku.yaml
-#  - !include /config/lovelace/network.yaml
-#  - !include /config/lovelace/spares.yaml
-  - !include /config/lovelace/fitbit.yaml
 #  - !include /config/lovelace/fitbit2.yaml
 #  - !include /config/lovelace/testtv.yaml
 #  - !include /config/lovelace/test.yaml
 #  - !include /config/lovelace/lighting.yaml
 #  - !include /config/lovelace/plugin.yaml
-  - !include /config/lovelace/octoprint.yaml
-  - !include /config/lovelace/people.yaml
-  
+#  - !include /config/lovelace/lights.yaml
+#  - !include /config/lovelace/roku.yaml
+#  - !include /config/lovelace/network.yaml
+#  - !include /config/lovelace/spares.yaml
+
  # - cch:
  #     options: clock
  #     hide_config: true
@@ -53,6 +79,8 @@ resources:
     type: module
   - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js?v=5
     type: module
+  - url: /community_plugin/calendar-card/calendar-card.js
+    type: js
     
 # Type Unknown
   - url: /community_plugin/group-card/group-card.js?v=5

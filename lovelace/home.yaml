@@ -3,11 +3,7 @@ icon: mdi:home-variant
 
 type: horizontal-stack
 cards:
-  - type: horizontal-stack
-    cards:
-      - type: weather-forecast
-        entity: weather.wilsonscorner
-        theme: dark_red
+
 
  # - type: custom:group-card
  #   card:
@@ -18,7 +14,9 @@ cards:
   - type: vertical-stack
     cards:
 
-
+      - type: weather-forecast
+        entity: weather.wilsonscorner
+        theme: dark_red
 
       - type: glance
         title: Family
@@ -30,11 +28,13 @@ cards:
             - entity: person.clint_wilson           
             - entity: person.beth_wilson
             - entity: person.dakota_wilson
-            - entity: sensor.activity
-            - entity: sensor.battery_level
-            - entity: sensor.battery_state
-            - entity: sensor.last_update_trigger
-            - entity: sensor.geocoded_location
+         #   - entity: sensor.activity
+         #   - entity: sensor.battery_level
+         #   - entity: sensor.battery_state
+         #   - entity: sensor.last_update_trigger
+         #   - entity: sensor.geocoded_location
+
+
              
       - type: glance
         title: System
@@ -45,6 +45,25 @@ cards:
             - entity: sensor.disk_use_percent_home
               name: Disk Usage
 
+      - type: glance
+        title: 3D Printer
+        columns: 2
+        entities:
+            - entity: sensor.nitro_3d_current_state
+              name: Status
+            - entity: sensor.nitro_3d_job_percentage
+              name: Completion %
+            - entity: sensor.nitro_3d_time_elapsed
+              name: Elapsed Time
+            - entity: sensor.nitro_3d_time_remaining
+              name: Remaining Time
+            - entity: binary_sensor.nitro_3d_printing
+              name: Dunno
+            - entity: binary_sensor.nitro_3d_printing_error
+              name: Error
+
+
+
 
             
             
@@ -52,7 +71,6 @@ cards:
 
   - type: vertical-stack
     cards:            
-
       - type: glance
         title: Doors
         columns: 2
@@ -61,6 +79,31 @@ cards:
              name: Front Door
            - entity: sensor.cottage_door
              name: Cottage Door
+   
+      - type: glance
+        title: Living Room
+        Columns: 4
+        entities:    
+           - entity: light.lrc1
+             name: LR Ceiling 1
+             tap_action:
+               action: toggle
+           - entity: light.lrc2
+             name: LR Ceiling 2 
+             tap_action:
+               action: toggle
+
+
+      - type: glance
+        title: Dining Room
+        Columns: 4
+        entities:               
+           - entity: light.dr1
+             tap_action:
+               action: toggle           
+           - entity: light.dr2
+             tap_action:
+               action: toggle 
 
       - type: glance      
         title: Master Bedroom
@@ -98,20 +141,7 @@ cards:
                action: toggle
 
       - type: glance
-        title: Living Room
-        Columns: 4
-        entities:    
-           - entity: light.lrc1
-             name: LR Ceiling 1
-             tap_action:
-               action: toggle
-           - entity: light.lrc2
-             name: LR Ceiling 2 
-             tap_action:
-               action: toggle
-
-      - type: glance
-        title: Man Cave
+        title: Office
         Columns: 4
         entities:    
            - entity: light.oc1
@@ -128,20 +158,29 @@ cards:
              tap_action:
               action: toggle             
 
+
       - type: glance
-        title: Dining Room
+        title: Misc
         Columns: 4
         entities:               
-           - entity: light.dr1
+           - entity: light.fp
              tap_action:
-               action: toggle           
-           - entity: light.dr2
-             tap_action:
-               action: toggle 
+               action: toggle    
 
-          
+
+
   - type: vertical-stack
     cards:
+      
+      - type: glance
+        title: Switches
+        Columns: 2
+        entities:
+          - entity: switch.printer
+            icon: mdi:printer-3d-nozzle-outline
+          - entity: switch.tbd
+            icon: mdi:meditation
+            name: Zen
 
 
       - type: entities
